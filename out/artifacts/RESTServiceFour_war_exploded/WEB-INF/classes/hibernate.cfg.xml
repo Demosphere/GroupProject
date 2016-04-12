@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="dialect">
+            org.hibernate.dialect.MySQL5Dialect
+        </property>
+        <property name="connection.url">
+            <!--jdbc:mysql://127.3.195.130:3306/tomcat -->
+            <!-- jdbc:mysql://127.3.195.130:3306/groupproject -->
+            jdbc:mysql://127.3.195.130:3306/groupproj
+        </property>
+        <property name="connection.username">
+            user
+            <!-- adminYq2Sacq -->
+        </property>
+        <property name="connection.password">
+            user
+            <!-- fS8zEQf487kM -->
+        </property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <mapping class="com.bmf.gp.entity.UsersEntity"/>
+        <mapping resource="UsersEntity.hbm.xml"/>
+        <mapping class="com.bmf.gp.entity.SitesEntity"/>
+        <mapping resource="SitesEntity.hbm.xml"/>
+    </session-factory>
+
+</hibernate-configuration>

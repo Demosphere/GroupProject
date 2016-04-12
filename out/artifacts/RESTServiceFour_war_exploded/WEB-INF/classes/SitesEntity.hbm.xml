@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.bmf.gp.entity.SitesEntity" table="sites" schema="groupproj">
+        <id name="siteId" type="int" column="site_id">
+            <generator class="native"/>
+        </id>
+        <property name="siteKey" column="site_key"/>
+        <set name="users" cascade="all">
+            <key column="site_id"/>
+            <one-to-many class="com.bmf.gp.entity.UsersEntity"/>
+        </set>
+    </class>
+</hibernate-mapping>
