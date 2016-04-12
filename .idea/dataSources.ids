@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - groupproj@localhost" uuid="d7ce6697-0bfa-4bf3-8775-350df43ebc09">
+    <database-info product="MySQL" version="5.7.10-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="groupproj"/>
+      <table id="2" parent="1" name="sites"/>
+      <table id="3" parent="1" name="users"/>
+      <column id="4" parent="2" name="site_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="5" parent="2" name="site_key">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <index id="6" parent="2" name="sites_site_id_uindex">
+        <columns>site_id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="7" parent="2" name="PRIMARY">
+        <columns>site_id</columns>
+        <primary>1</primary>
+      </key>
+      <key id="8" parent="2" name="sites_site_id_uindex">
+        <columns>site_id</columns>
+        <underlying-index>sites_site_id_uindex</underlying-index>
+      </key>
+      <column id="9" parent="3" name="user_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="10" parent="3" name="site_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="11" parent="3" name="user_name">
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="12" parent="3" name="password">
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="13" parent="3" name="user_role">
+        <data-type>varchar(30)</data-type>
+      </column>
+      <index id="14" parent="3" name="users_sites_site_id_fk">
+        <columns>site_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="15" parent="3" name="users_user_id_uindex">
+        <columns>user_id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="16" parent="3" name="PRIMARY">
+        <columns>user_id</columns>
+        <primary>1</primary>
+      </key>
+      <key id="17" parent="3" name="users_user_id_uindex">
+        <columns>user_id</columns>
+        <underlying-index>users_user_id_uindex</underlying-index>
+      </key>
+      <foreign-key id="18" parent="3" name="users_sites_site_id_fk">
+        <columns>site_id</columns>
+        <ref-key>~.sites.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+    </database-model>
+  </data-source>
+  <data-source name="resources:hibernate.cfg.xml/Hibernate" uuid="9b5b397a-3c15-44b4-8448-a44c7e83b36f">
+    <database-info product="MySQL" version="5.7.10-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="groupproj"/>
+      <table id="2" parent="1" name="sites"/>
+      <table id="3" parent="1" name="users"/>
+      <column id="4" parent="2" name="site_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="5" parent="2" name="site_key">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <index id="6" parent="2" name="sites_site_id_uindex">
+        <columns>site_id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="7" parent="2" name="PRIMARY">
+        <columns>site_id</columns>
+        <primary>1</primary>
+      </key>
+      <key id="8" parent="2" name="sites_site_id_uindex">
+        <columns>site_id</columns>
+        <underlying-index>sites_site_id_uindex</underlying-index>
+      </key>
+      <column id="9" parent="3" name="user_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="10" parent="3" name="site_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="11" parent="3" name="user_name">
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="12" parent="3" name="password">
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="13" parent="3" name="user_role">
+        <data-type>varchar(30)</data-type>
+      </column>
+      <index id="14" parent="3" name="users_sites_site_id_fk">
+        <columns>site_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="15" parent="3" name="users_user_id_uindex">
+        <columns>user_id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="16" parent="3" name="PRIMARY">
+        <columns>user_id</columns>
+        <primary>1</primary>
+      </key>
+      <key id="17" parent="3" name="users_user_id_uindex">
+        <columns>user_id</columns>
+        <underlying-index>users_user_id_uindex</underlying-index>
+      </key>
+      <foreign-key id="18" parent="3" name="users_sites_site_id_fk">
+        <columns>site_id</columns>
+        <ref-key>~.sites.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+    </database-model>
+  </data-source>
+</component>

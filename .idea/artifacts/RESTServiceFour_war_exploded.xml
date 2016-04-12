@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="RESTServiceFour:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/RESTServiceFour_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="RESTServiceFour" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="application" name="log4j" />
+          <element id="file-copy" path="C:/ProjectDependencies/javax.json-api-1.0.jar" />
+          <element id="library" level="project" name="Jersey-2.2" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="RESTServiceFour/web/Web" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - groupproj@localhost" uuid="d7ce6697-0bfa-4bf3-8775-350df43ebc09">
+      <secret-storage>master_key</secret-storage>
+      <user-name>user</user-name>
+      <schema-pattern>groupproj.*</schema-pattern>
+      <default-schemas>groupproj.*</default-schemas>
+    </data-source>
+    <data-source name="resources:hibernate.cfg.xml/Hibernate" uuid="9b5b397a-3c15-44b4-8448-a44c7e83b36f">
+      <user-name>user</user-name>
+      <user-password>dfc0dfcedfc8dfc9df90dfc7dfd3dfd9dfdbdfc6df90df85df85df9bdf98df9ddf84df99df84df9bdf93df9fdf84df9bdf99df9adf90df99df99df9adf9cdf85dfcddfd8dfc5dfdfdfdadfdadfd8dfc5dfc0</user-password>
+      <schema-pattern>groupproj.*</schema-pattern>
+      <default-schemas>groupproj.*</default-schemas>
+    </data-source>
+  </component>
+</project>
